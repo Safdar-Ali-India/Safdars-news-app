@@ -18,30 +18,17 @@ Clone the Repository: Clone the repository to your local machine using the follo
 
 bash
 Copy code
-git clone <repository_url>
+git clone [<repository_url>](https://github.com/Safdar-Ali-India/Safdars-news-app)
 Install Dependencies: Navigate to the project directory and install the required dependencies using npm or yarn:
 
-Copy code
-npm install
-or
+npm run dev
 
-Copy code
-yarn install
-Run the Application: Start the development server to run the application locally:
 
-sql
-Copy code
-npm start
-or
+npm create vite@latest
 
-sql
-Copy code
-yarn start
-Tutorial
 For detailed instructions on building this news app, you can watch the tutorial video on YouTube.
 
 Credits
 Author: Safdar Ali
-Tutorial Duration: 6 minutes
-Published: 12 hours ago
+
 I hope you find this project helpful and informative! If you encounter any issues or have any questions, feel free to reach out. Don't forget to like the video and subscribe to the channel for more tutorials! ❤️
