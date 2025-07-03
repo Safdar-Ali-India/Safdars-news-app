@@ -10,7 +10,7 @@ const NewsItem = ({ title, description, src, url }) => {
 
   return (
     <div
-      className="card bg-dark text-light mb-3 d-inline-block my-3 mx-3"
+      className="card bg-dark text-light mb-3 d-inline-block my-3 mx-3 news-card"
       style={{ maxWidth: '345px' }}
     >
       <img
