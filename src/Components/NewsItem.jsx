@@ -22,7 +22,7 @@ const NewsItem = ({ title, description, src, url }) => {
       <div className="card-body">
         <h5 className="card-title">{displayTitle}</h5>
         <p className="card-text">{displayDescription}</p>
-        <a href={url} className="btn btn-primary">
+        <a href={url} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
           Read More
         </a>
       </div>
