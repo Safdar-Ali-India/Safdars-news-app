@@ -52,6 +52,12 @@ const NewsBoard = ({ category }) => {
 
       {!loading &&
         !hasError &&
+        articles.length === 0 && (
+          <p className="text-center text-secondary">No headlines for this category right now.</p>
+        )}
+
+      {!loading &&
+        !hasError &&
         articles.map((news, index) => (
           <NewsItem
             key={news.url || index}
