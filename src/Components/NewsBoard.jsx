@@ -41,8 +41,11 @@ const NewsBoard = ({ category }) => {
 
   return (
     <>
-      <h2 className="d-flex justify-content-center p-4">
+      <h2 className="d-flex justify-content-center align-items-center gap-2 p-4">
         Latest <span className="badge text-bg-success">news</span>
+        {!loading && !hasError && articles.length > 0 && (
+          <span className="badge text-bg-secondary">{articles.length}</span>
+        )}
       </h2>
 
       {loading && <p className="text-center text-light">Loading headlines...</p>}
