@@ -59,17 +59,19 @@ const NewsBoard = ({ category }) => {
           <p className="text-center text-secondary">No headlines for this category right now.</p>
         )}
 
-      {!loading &&
-        !hasError &&
-        articles.map((news, index) => (
-          <NewsItem
-            key={news.url || index}
-            title={news.title}
-            description={news.description}
-            src={news.urlToImage}
-            url={news.url}
-          />
-        ))}
+      {!loading && !hasError && articles.length > 0 && (
+        <div className="news-grid">
+          {articles.map((news, index) => (
+            <NewsItem
+              key={news.url || index}
+              title={news.title}
+              description={news.description}
+              src={news.urlToImage}
+              url={news.url}
+            />
+          ))}
+        </div>
+      )}
     </>
   );
 };
