@@ -9,7 +9,7 @@ const App = () => {
   
   return (
     <>
-    <Navbar setCategory = {setCategory}/>
+    <Navbar setCategory = {setCategory} category={category}/>
     <NewsBoard category= {category} />
     
     </>

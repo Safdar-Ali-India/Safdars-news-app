@@ -1,7 +1,7 @@
 import React from 'react';
 import { CATEGORIES } from '../constants/categories';
 
-const Navbar = ({ setCategory }) => {
+const Navbar = ({ setCategory, category }) => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="dark">
       <div className="container-fluid">
@@ -25,7 +25,7 @@ const Navbar = ({ setCategory }) => {
               <li className="nav-item" key={item.value}>
                 <button
                   type="button"
-                  className="nav-link btn btn-link"
+                  className={`nav-link btn btn-link ${category === item.value ? 'fw-bold text-success' : ''}`}
                   onClick={() => setCategory(item.value)}
                 >
                   {item.label}
