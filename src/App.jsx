@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './Components/Navbar';
 import NewsBoard from './Components/NewsBoard';
+import Footer from './Components/Footer';
 
 
 const App = () => {
@@ -11,7 +12,7 @@ const App = () => {
     <>
     <Navbar setCategory = {setCategory} category={category}/>
     <NewsBoard category= {category} />
-    
+    <Footer />
     </>
 
     
