@@ -39,6 +39,9 @@ const NewsBoard = ({ category }) => {
     return () => controller.abort();
   }, [category]);
 
+  const showGrid = !loading && !hasError && articles.length > 0;
+  const showEmpty = !loading && !hasError && articles.length === 0;
+
   return (
     <>
       <h2 className="d-flex justify-content-center align-items-center gap-2 p-4">
@@ -53,13 +56,11 @@ const NewsBoard = ({ category }) => {
         <p className="text-center text-danger">Could not load news. Try again later.</p>
       )}
 
-      {!loading &&
-        !hasError &&
-        articles.length === 0 && (
+      {showEmpty && (
           <p className="text-center text-secondary">No headlines for this category right now.</p>
         )}
 
-      {!loading && !hasError && articles.length > 0 && (
+      {showGrid && (
         <div className="news-grid">
           {articles.map((news, index) => (
             <NewsItem
