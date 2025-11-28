@@ -56,4 +56,16 @@ describe('App integration', () => {
       expect(screen.getByText(/Could not load news/i)).toBeInTheDocument();
     });
   });
+
+  it('shows empty message when api returns no articles', async () => {
+    fetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({ status: 'ok', articles: [] }),
+    });
+    render(<App />);
+
+    await waitFor(() => {
+      expect(screen.getByText(/No headlines for this category/i)).toBeInTheDocument();
+    });
+  });
 });
