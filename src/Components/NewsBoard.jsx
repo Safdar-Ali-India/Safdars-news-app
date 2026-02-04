@@ -16,6 +16,9 @@ const NewsBoard = ({ category }) => {
 
       try {
         const apiKey = import.meta.env.VITE_API_KEY;
+        if (!apiKey) {
+          throw new Error('Missing API key');
+        }
         const url = buildHeadlinesUrl(category, apiKey);
         const response = await fetch(url, { signal: controller.signal });
 
