@@ -21,3 +21,36 @@ body {
   gap: 0.5rem;
   padding: 0 1rem 2rem;
 }
+
+@keyframes skeleton-pulse {
+  0% { opacity: 0.55; }
+  50% { opacity: 0.85; }
+  100% { opacity: 0.55; }
+}
+
+.news-skeleton .skeleton-block {
+  background-color: #2a2a2a;
+  border-radius: 4px;
+  animation: skeleton-pulse 1.4s ease-in-out infinite;
+}
+
+.news-skeleton .skeleton-image {
+  height: 200px;
+  width: 100%;
+}
+
+.news-skeleton .skeleton-title {
+  height: 1.25rem;
+  width: 80%;
+  margin-bottom: 0.75rem;
+}
+
+.news-skeleton .skeleton-text {
+  height: 0.75rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.news-skeleton .skeleton-text.short {
+  width: 60%;
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import NewsItem from './NewsItem';
+import NewsSkeleton from './NewsSkeleton';
 import { buildHeadlinesUrl, normalizeArticles } from '../utils/newsApi';
 
 const NewsBoard = ({ category }) => {
@@ -54,7 +55,7 @@ const NewsBoard = ({ category }) => {
         )}
       </h2>
 
-      {loading && <p className="text-center text-light">Loading headlines...</p>}
+      {loading && <NewsSkeleton />}
       {hasError && !loading && (
         <p className="text-center text-danger">Could not load news. Try again later.</p>
       )}
