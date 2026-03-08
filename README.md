@@ -32,3 +32,10 @@ Credits
 Author: Safdar Ali
 
 I hope you find this project helpful and informative! If you encounter any issues or have any questions, feel free to reach out. Don't forget to like the video and subscribe to the channel for more tutorials! ❤️
+
+## Tests
+
+```bash
+npm install
+npm test
+```
